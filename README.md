@@ -2,33 +2,32 @@
 
 Thank you for your interest in joining the Solutions Engineering team at Dynatrace. The next step is to set up and demo an environment of your choosing, instrumented with the Dynatrace 3rd-generation platform. The goal of this capstone is to showcase your technical skills, your fluency with the modern Grail-backed, AI-driven Dynatrace platform, and your ability to present its value to multiple business units in a single presentation.
 
-See below for further instructions and expectations of this demo and reach out to your hiring manager or kyle.harrington@dynatrace.com with any questions.
+See below for instructions and expectations of this demo and please reach out to the hiring manager (mike.ditmar@dynatrace.com) with any questions.
 
 ---
 ### Setup
 
-1. Sign up for a free Dynatrace SaaS trial
+**1. Sign up for a free Dynatrace SaaS trial**
     - https://www.dynatrace.com/signup/
 
-1. Deploy OneAgent to your environment
-    - [Linux](https://docs.dynatrace.com/docs/ingest-from/dynatrace-oneagent/installation-and-operation/linux/installation/install-oneagent-on-linux)
-    - [Windows](https://docs.dynatrace.com/docs/ingest-from/dynatrace-oneagent/installation-and-operation/windows/installation/install-oneagent-on-windows)
-    - [Kubernetes / OpenShift - Helm](https://docs.dynatrace.com/docs/ingest-from/setup-on-k8s/deployment/full-stack-observability)
-    - [Kubernetes / OpenShift - Manifest Deployment](https://docs.dynatrace.com/docs/shortlink/installation-k8s-cloud-native-fs#manifest)
+**2. Deploy OneAgent to your environment**
+  - [Linux](https://docs.dynatrace.com/docs/ingest-from/dynatrace-oneagent/installation-and-operation/linux/installation/install-oneagent-on-linux)
+  - [Windows](https://docs.dynatrace.com/docs/ingest-from/dynatrace-oneagent/installation-and-operation/windows/installation/install-oneagent-on-windows)
+  - [Kubernetes / OpenShift - Helm](https://docs.dynatrace.com/docs/ingest-from/setup-on-k8s/deployment/full-stack-observability)
+  - [Kubernetes / OpenShift - Manifest Deployment](https://docs.dynatrace.com/docs/shortlink/installation-k8s-cloud-native-fs#manifest)
 
-    For cloud-native applications, [OpenTelemetry OTLP](https://docs.dynatrace.com/docs/ingest-from/opentelemetry) is also a valid ingest path and can be used in place of, or alongside, OneAgent.
 
-1. Deploy a Web Application
+**3. Deploy a Web Application**
     
-    Set up a demo application in your environment.
+  Set up a demo application in your environment.
 
-    Requirements of the demo application 
-    - Front end web server (for browser RUM injection) 
-    - Code level calls more advanced than a "hello world" or health check 
-      -  Check [Dynatrace's list of supported technologies](https://docs.dynatrace.com/docs/ingest-from/technology-support) for technology compatibility
-    - Application logs are generated and available (stdout by default)
-    - A Database component 
-    - The application must be capable of generating errors/ crashes/ outages
+  Requirements of the demo application:
+  - Front end web server (for browser RUM injection) 
+  - Code level calls more advanced than a "hello world" or health check 
+    -  Check [Dynatrace's list of supported technologies](https://docs.dynatrace.com/docs/ingest-from/technology-support) for technology compatibility
+  - Application logs are generated and available (stdout by default)
+  - A Database component 
+  - The application must be capable of generating errors/ crashes/ outages
 
     Any application that meets the requirements above will work. Here are a couple of recommended sample apps:
 
@@ -39,42 +38,35 @@ See below for further instructions and expectations of this demo and reach out t
 ---
 ### Demo Requirements
 
-1. Required capabilities to demonstrate
+Required capabilities to demonstrate
 
-    Each capability below describes WHAT to demonstrate, with links to documentation and demo examples. There's no single right way to do these in Dynatrace — the platform offers multiple paths, and you should pick what fits your demo. The links are meant to be instructional and for starting points, not prescriptions.
+Each capability below describes WHAT to demonstrate, with links to documentation and demo examples. There's no single right way to do these in Dynatrace — the platform offers multiple paths, and you should pick what fits your demo. The links are meant to be instructional and for starting points, not prescriptions.
 
-    **4.1 Infrastructure**
-   Demonstrate the health and performance of the infrastructure that makes up your environment.
+**1. Infrastructure**
+  Demonstrate the health and performance of the infrastructure that makes up your environment.
    
-   **Infrastructure and Operations**
-    - [Documentation](https://www.dynatrace.com/hub/detail/infrastructure-operations/)
-    - [Video](https://docs.dynatrace.com/docs/manage/segments)
+- **Infrastructure and Operations**
+  - [Documentation](https://www.dynatrace.com/hub/detail/infrastructure-operations/)
+  - [Video](https://docs.dynatrace.com/docs/manage/segments)
    
-   ***Kubernetes (if applicable)***
-    - [Documentation](https://www.dynatrace.com/hub/detail/kubernetes-1/)
-    - [Video](https://www.youtube.com/watch?v=gQcaF4Dm7c0&list=PLqt2rd0eew1aHqfD-XRNVaIAiN-QxkPK6&index=9)
-   
+- ***Kubernetes (if applicable)***
+  - [Documentation](https://www.dynatrace.com/hub/detail/kubernetes-1/)
+  - [Video](https://www.youtube.com/watch?v=gQcaF4Dm7c0&list=PLqt2rd0eew1aHqfD-XRNVaIAiN-QxkPK6&index=9)
 
-    
+**2. Services**
+  Demonstrate the real-time monitoring of service health and performance across your Application environment.
+  - [Documentation](https://docs.dynatrace.com/docs/observe/application-observability/services/services-app)
+  - [Video](https://www.youtube.com/watch?v=35rzyxQZCpY)   
 
-   **4.2 Services**
-    Demonstrate the real-time monitoring of service health and performance across your Application environment.
-    - [Documentation](https://docs.dynatrace.com/docs/observe/application-observability/services/services-app)
-    - [Video](https://www.youtube.com/watch?v=35rzyxQZCpY)
-  
-   
-
-    **4.4 Traces**
+**3. Traces**
     One of the core tenants of Observability, demonstrate distributed traces from your Application to analyze where time is spent, service interaction and error inspection.
-    - [Documentation](https://www.dynatrace.com/hub/detail/distributed-tracing/)
-    - [Video](https://www.youtube.com/watch?v=O4zWlwJ4hsA&list=PLqt2rd0eew1aHqfD-XRNVaIAiN-QxkPK6&index=10)
+     - [Documentation](https://www.dynatrace.com/hub/detail/distributed-tracing/)
+     - [Video](https://www.youtube.com/watch?v=O4zWlwJ4hsA&list=PLqt2rd0eew1aHqfD-XRNVaIAiN-QxkPK6&index=10)
   
-      
+**4. Logs**
+  Ensure that your Host, Process and Application logs are being ingested into Dynatrace and demonstrate logs in context of your traces as well as querying logs.
 
-    **4.4 Logs**
-    Ensure that your Host, Process and Application logs are being ingested into Dynatrace and demonstrate logs in context of your traces as well as querying logs.
-
-   ***Logs in context of traces***
+   -**Logs in context of traces**
     - [Logs ingestion](https://docs.dynatrace.com/docs/analyze-explore-automate/logs/lma-log-ingestion)
     - [Connecting Logs to Traces](https://docs.dynatrace.com/docs/analyze-explore-automate/logs/lma-log-enrichment)
     
