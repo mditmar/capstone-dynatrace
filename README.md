@@ -31,9 +31,8 @@ If you are planning on using a Dynatrace Managed install for this demo, please s
     - A Database component 
     - The application must be capable of generating errors/ crashes/ outages
 
-    Any application that meets the requirements above will work. Recommended sample apps (in suggested order):
+    Any application that meets the requirements above will work. Here are a couple of recommended sample apps:
 
-    - [Astronomy Shop](https://opentelemetry.io/docs/demo/kubernetes-deployment/)
     - [Online Boutique](https://github.com/GoogleCloudPlatform/microservices-demo)
     - [EasyTrade](https://github.com/Dynatrace/easytrade)
     - Any custom application you've worked with or built that meets the requirements above
@@ -41,49 +40,61 @@ If you are planning on using a Dynatrace Managed install for this demo, please s
 
 1. Required capabilities to demonstrate
 
-    Each capability below describes WHAT to demonstrate, with linked options for HOW. There's no single right way to do these in Dynatrace — the platform offers multiple paths, and you should pick what fits your demo. The linked docs are starting points, not prescriptions.
+    Each capability below describes WHAT to demonstrate, with links to documentation and demo examples. There's no single right way to do these in Dynatrace — the platform offers multiple paths, and you should pick what fits your demo. The links are meant to be instructional and for starting points, not prescriptions.
 
-    **4.1 Data organization & filtering**
+    **4.1 Infrastructure**
+   Demonstrate the health and performance of the infrastructure that makes up your environment.
+   
+   **Infrastructure and Operations**
+    - [Documentation](https://www.dynatrace.com/hub/detail/infrastructure-operations/)
+    - [Video](https://docs.dynatrace.com/docs/manage/segments)
+   
+   ***Kubernetes (if applicable)***
+    - [Documentation](https://www.dynatrace.com/hub/detail/kubernetes-1/)
+    - [Video](https://www.youtube.com/watch?v=gQcaF4Dm7c0&list=PLqt2rd0eew1aHqfD-XRNVaIAiN-QxkPK6&index=9)
+   
 
-    Demonstrate how you organize and filter data in your environment. Options include:
-    - [Segments](https://docs.dynatrace.com/docs/manage/segments) (query-time filter conditions on Grail)
-    - [Grail buckets](https://docs.dynatrace.com/docs/platform/grail/organize-data) for data partitioning and retention
-    - [IAM data-access policies on Grail](https://docs.dynatrace.com/docs/platform/grail/organize-data/assign-permissions-in-grail)
-    - [OneAgent host groups](https://docs.dynatrace.com/docs/observe/infrastructure-observability/hosts/configuration/organize-your-environment-using-host-groups)
-    - [OneAgent host tagging](https://docs.dynatrace.com/docs/manage/tags-and-metadata/setup/how-to-define-tags)
+    
 
-    **4.2 Alerting & notification routing**
+   **4.2 Services**
+    Demonstrate the real-time monitoring of service health and performance across your Application environment.
+    - [Documentation](https://docs.dynatrace.com/docs/observe/application-observability/services/services-app)
+    - [Video](https://www.youtube.com/watch?v=35rzyxQZCpY)
+  
+   
 
-    Demonstrate how problems and events route to the right teams or channels. Options include:
-    - [Workflows](https://docs.dynatrace.com/docs/analyze-explore-automate/workflows) for event-driven routing and automation
-    - Workflow integrations with Slack, Microsoft Teams, ServiceNow, PagerDuty, or custom notification endpoints
+    **4.4 Traces**
+    One of the core tenants of Observability, demonstrate distributed traces from your Application to analyze where time is spent, service interaction and error inspection.
+    - [Documentation](https://www.dynatrace.com/hub/detail/distributed-tracing/)
+    - [Video](https://www.youtube.com/watch?v=O4zWlwJ4hsA&list=PLqt2rd0eew1aHqfD-XRNVaIAiN-QxkPK6&index=10)
+  
+      
 
-    **4.3 Telemetry enrichment & tagging**
+    **4.4 Logs**
+    Ensure that your Host, Process and Application logs are being ingested into Dynatrace and demonstrate logs in context of your traces as well as querying logs.
 
-    Demonstrate how you enrich telemetry with ownership, environment, or business context. Options include:
-    - [OneAgent host tagging](https://docs.dynatrace.com/docs/manage/tags-and-metadata/setup/how-to-define-tags) at deployment time
-    - [OpenPipeline](https://docs.dynatrace.com/docs/platform/openpipeline) processors for in-flight enrichment
-    - Extension enrichment attributes (security context, product, cost center)
-    - Kubernetes labels via the Dynatrace Operator
+   ***Logs in context of traces***
+    - [Logs ingestion](https://docs.dynatrace.com/docs/analyze-explore-automate/logs/lma-log-ingestion)
+    - [Connecting Logs to Traces](https://docs.dynatrace.com/docs/analyze-explore-automate/logs/lma-log-enrichment)
+    
+    ***Querying Logs***
+    - [Logs App - Documentation](https://www.dynatrace.com/hub/detail/logs/)
+    - [Logs App - Video](https://www.youtube.com/watch?v=cwF-Md_oFHM&list=PLqt2rd0eew1aHqfD-XRNVaIAiN-QxkPK6&index=11)
+    
+    **4.5 Frontend / Real User Monitoring**
+    Your demo application should contain a Web frontend where user sessions and activity can be tracked and correlated to the backend services. Demonstrate 
+    
 
-    **4.4 Logs, metrics, and traces**
+    **4.5 Dashboards**
 
-    - [Logs ingestion](https://docs.dynatrace.com/docs/analyze-explore-automate/logs/lma-log-ingestion) (OneAgent, OpenPipeline, OTLP, Cribl, or custom)
-    - [Metric ingestion](https://docs.dynatrace.com/docs/analyze-explore-automate/metrics) (OneAgent metric API, Prometheus, OTLP, extensions)
-    - [Trace ingestion](https://docs.dynatrace.com/docs/observe/application-observability/distributed-tracing/ingest-traces) (OneAgent auto-instrumentation, OTLP)
-
-    **4.5 Real User Monitoring**
-
-    - [Browser monitoring check](https://docs.dynatrace.com/docs/observe/digital-experience/synthetic-monitoring/browser-monitors/create-a-single-url-browser-monitor) for your web app
-    - [Session Replay](https://docs.dynatrace.com/docs/observe/digital-experience/session-replay/enable-session-replay-web)
-    - [Conversion goals](https://docs.dynatrace.com/docs/observe/digital-experience/web-applications/analyze-and-use/define-conversion-goals) for the web app
+   
 
     **4.6 AI-driven analysis**
 
-    Demonstrate at least one AI-driven insight using [Davis](https://docs.dynatrace.com/docs/dynatrace-intelligence). Options include:
-    - Davis problem root-cause walkthrough
-    - [Davis CoPilot](https://docs.dynatrace.com/docs/dynatrace-intelligence/agentic-and-generative-ai/agentic-and-generative-ai-getting-started) generating DQL in a Notebook
-    - [Dynatrace Assist](https://docs.dynatrace.com/docs/dynatrace-intelligence/agentic-and-generative-ai/chat-with-dynatrace-assist) for guided analysis
+    Demonstrate AI-driven insights using [Dynatrace Intelligence](https://docs.dynatrace.com/docs/dynatrace-intelligence). It is recommended to have your demo Application experience a failure, crash, errors so that Dynatrace's Anomaly Detection will automatically detect this behavior and generate a Problem.
+    - [Problems App](https://www.youtube.com/watch?v=Tud2K3zyync&list=PLqt2rd0eew1aHqfD-XRNVaIAiN-QxkPK6&index=6) for analyzing issues within your environment. 
+    - [Dynatrace Assist](https://docs.dynatrace.com/docs/dynatrace-intelligence/agentic-and-generative-ai/chat-with-dynatrace-assist) generating DQL in a Notebook
+    - for guided analysis
     - Predictive forecast or anomaly detection on a chart
 
     **4.7 Notebooks and DQL**
@@ -95,31 +106,22 @@ If you are planning on using a Dynatrace Managed install for this demo, please s
 
     These are not required, but it is strongly encouraged that you configure some of these. Make sure you call these out during your demo if you set them up!
 
-    - [OpenPipeline](https://docs.dynatrace.com/docs/platform/openpipeline) — ingest transformation and enrichment
-    - [BizEvents / Business Analytics](https://docs.dynatrace.com/docs/observe/business-observability/bo-events-capturing)
-    - [Log Events](https://docs.dynatrace.com/docs/analyze-explore-automate/logs/lma-log-processing/lma-log-events)
-    - [OpenTelemetry OTLP ingest](https://docs.dynatrace.com/docs/ingest-from/opentelemetry) (if you didn't already exercise OTLP in §4.4)
-    - [Site Reliability Guardian](https://docs.dynatrace.com/docs/deliver/site-reliability-guardian) for release validation
-    - [Live Debugger](https://docs.dynatrace.com/docs/observe/application-observability/live-debugger)
-    - [Runtime Vulnerability Analytics](https://docs.dynatrace.com/docs/secure/application-security/vulnerability-analytics)
-    - [Kubernetes Security Posture Management](https://docs.dynatrace.com/docs/ingest-from/setup-on-k8s/deployment/security-posture-management)
-    - [Cloud account integration](https://docs.dynatrace.com/docs/observe/infrastructure-observability/cloud-platform-monitoring) (AWS, Azure, GCP)
-    - [RUM Session Properties](https://docs.dynatrace.com/docs/observe/digital-experience/web-applications/additional-configuration/define-user-action-and-session-properties)
-    - [Dynatrace Terraform Provider](https://registry.terraform.io/providers/dynatrace-oss/dynatrace/latest) for at least one configuration
+    - [dtctl](https://docs.dynatrace.com/docs/deliver/site-reliability-guardian) for release validation
+    - [Coding Agent Integration](https://docs.dynatrace.com/docs/observe/infrastructure-observability/cloud-platform-monitoring) (AWS, Azure, GCP)
 
     Feel free to review the full Dynatrace product documentation on [Getting started with Dynatrace](https://docs.dynatrace.com/docs/discover-dynatrace/get-started) and [Product News](https://www.dynatrace.com/news/blog/) pages and come up with your own integration ideas for your demo.
 
 
 1. Optional / explore
 
-    These aren't expected for the capstone, but they're great differentiators if you want to show platform breadth or AI fluency.
+    These are not required, but it is strongly encouraged that you configure some of these. Make sure you call these out during your demo if you set them up!
 
-    - [Dynatrace MCP Server](https://docs.dynatrace.com/docs/dynatrace-intelligence/dynatrace-mcp) + [Dynatrace for AI agent skills](https://github.com/Dynatrace/dynatrace-for-ai) — connect Claude Code, Cursor, Copilot, or other AI coding agents to your live tenant for real-time platform context
-    - [OneAgent SDK](https://docs.dynatrace.com/docs/ingest-from/extend-dynatrace/extend-tracing/oneagent-sdk) for non-native language instrumentation
-    - [Python OneAgent auto-instrumentation](https://github.com/dynatrace-oss/OneAgent-SDK-Python-AutoInstrumentation)
-    - [Private ActiveGate synthetic location](https://docs.dynatrace.com/docs/observe/digital-experience/synthetic-monitoring/private-synthetic-locations/create-a-private-synthetic-location)
-    - [Events API](https://docs.dynatrace.com/docs/dynatrace-api/environment-api/events-v2/post-event) for injecting entity events
-    - Custom [Strato](https://developer.dynatrace.com/design/about-strato-design-system/) app on [AppEngine](https://docs.dynatrace.com/docs/platform/appengine) — see the [5-minute quickstart](https://developer.dynatrace.com/quickstart/first-app-in-5-minutes/)
+    - [Site Reliability Guardian](https://docs.dynatrace.com/docs/deliver/site-reliability-guardian) for release validation
+    - [Cloud account integration](https://docs.dynatrace.com/docs/observe/infrastructure-observability/cloud-platform-monitoring) (AWS, Azure, GCP)
+    - [RUM Session Properties](https://docs.dynatrace.com/docs/observe/digital-experience/web-applications/additional-configuration/define-user-action-and-session-properties)
+    - [Dynatrace Terraform Provider](https://registry.terraform.io/providers/dynatrace-oss/dynatrace/latest) for at least one configuration
+
+    Feel free to review the full Dynatrace product documentation on [Getting started with Dynatrace](https://docs.dynatrace.com/docs/discover-dynatrace/get-started) and [Product News](https://www.dynatrace.com/news/blog/) pages and come up with your own integration ideas for your demo.
 
 
 1. Presentation Overview
