@@ -3,10 +3,9 @@
 Thank you for your interest in joining the Solutions Engineering team at Dynatrace. The next step is to set up and demo an environment of your choosing, instrumented with the Dynatrace 3rd-generation platform. The goal of this capstone is to showcase your technical skills, your fluency with the modern Grail-backed, AI-driven Dynatrace platform, and your ability to present its value to multiple business units in a single presentation.
 
 See below for further instructions and expectations of this demo and reach out to your hiring manager or kyle.harrington@dynatrace.com with any questions.
-    
-If you are planning on using a Dynatrace Managed install for this demo, please see the [Dynatrace Managed Capstone](/dt-managed/dt-managed-capstone.md) for instructions
 
 ---
+### Setup
 
 1. Sign up for a free Dynatrace SaaS trial
     - https://www.dynatrace.com/signup/
@@ -37,6 +36,8 @@ If you are planning on using a Dynatrace Managed install for this demo, please s
     - [EasyTrade](https://github.com/Dynatrace/easytrade)
     - Any custom application you've worked with or built that meets the requirements above
 
+---
+### Demo Requirements
 
 1. Required capabilities to demonstrate
 
